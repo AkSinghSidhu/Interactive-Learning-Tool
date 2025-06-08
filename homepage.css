@@ -1,0 +1,203 @@
+/*
+================================
+--- HOMEPAGE SPECIFIC STYLES ---
+================================
+*/
+
+.hero-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color-dark);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.topic-card {
+    background-color: var(--bg-color-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-out, border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 30px rgba(13, 110, 253, 0.1);
+}
+
+.card-icon {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.card-icon svg {
+    width: 48px;
+    height: 48px;
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0 0 0.5rem 0;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    color: var(--text-color-dark);
+    flex-grow: 1; /* This makes all cards have the same height */
+    margin-bottom: 1.5rem;
+}
+
+.card-footer {
+    margin-top: auto;
+}
+
+.card-category {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--bg-color-lighter);
+    color: var(--info-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+}
+
+.app-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-color-dark);
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments for homepage elements */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hero-action {
+    margin-top: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.8rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color-darker);
+    transform: translateY(-2px);
+}
+
+.main-nav {
+    margin-left: auto;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.main-nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-color-dark);
+    border-radius: 6px;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+    background-color: var(--bg-color-lighter);
+}
+
+.main-nav a.active-nav {
+    color: var(--primary-color);
+    background-color: var(--bg-color-lighter);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .app-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .main-nav {
+        margin-left: 0;
+        width: 100%;
+        border-top: 1px solid var(--border-color);
+        padding-top: 1rem;
+    }
+
+    .main-nav ul {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .main-nav a {
+        padding: 0.5rem;
+        text-align: center;
+        flex-grow: 1;
+    }
+}
